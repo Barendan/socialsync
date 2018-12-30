@@ -4,9 +4,7 @@ import styles from './directory.css';
 
 const PersonTemplate = (props) => {
 	return props.data.map( (item, i) => (
-		<div key={i}>
-			<li className={styles.personName}> {item.name} </li>
-		</div>
+		<li className={styles.personName} key={i}> {item.name} </li>
 	))
 }
 

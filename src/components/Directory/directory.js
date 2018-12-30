@@ -4,7 +4,7 @@ import './directory.css';
 import Catalog from '../../friends.json';
 import PersonTemplate from './personTemplate';
 
-import styles from './directory.css';
+import './directory.css';
 
 
 class Directory extends Component {
@@ -22,7 +22,7 @@ class Directory extends Component {
 	render() {
 		// console.log(this.state.people)
 		return (
-			<div className={styles.directory_wrapper}>
+			<div className="directory_wrapper">
 				<h2>Directory</h2>
 				<ul className="list">
 					<PersonTemplate data={this.state.people}/>
