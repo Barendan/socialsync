@@ -1,16 +1,27 @@
 import React, {Component} from 'react';
-import ReactDOM from 'react-dom';
 
 import './directory.css';
+import Catalog from '../../friends.json';
 
 class Directory extends Component {
-  render() {
-    return (
-      <div>
-      	Directory Display
-      </div>
-    );
-  }
+
+	state = {
+		people:[]
+	}
+
+	componentWillMount = () => {
+
+	}
+
+
+	render() {
+		console.log(Catalog)
+		return (
+			<div>
+				Directory Display
+			</div>
+		);
+	}
 }
 
 

@@ -7,7 +7,6 @@ import Directory from './components/Directory/directory';
 import DisplayPanel from './components/DisplayPanel/displayPanel';
 
 
-
 class App extends Component {
   render() {
     return (
