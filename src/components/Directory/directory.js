@@ -2,6 +2,10 @@ import React, {Component} from 'react';
 
 import './directory.css';
 import Catalog from '../../friends.json';
+import PersonTemplate from './personTemplate';
+
+import styles from './directory.css';
+
 
 class Directory extends Component {
 
@@ -10,15 +14,19 @@ class Directory extends Component {
 	}
 
 	componentWillMount = () => {
-
+		this.setState({
+				people: Catalog.friends
+			})
 	}
 
-
 	render() {
-		console.log(Catalog)
+		// console.log(this.state.people)
 		return (
-			<div>
-				Directory Display
+			<div className={styles.directory_wrapper}>
+				<h2>Directory</h2>
+				<ul className="list">
+					<PersonTemplate data={this.state.people}/>
+				</ul>
 			</div>
 		);
 	}
