@@ -9,7 +9,6 @@ class InfoPanels extends Component {
     return (
     	<div className="panel-wrapper">
     		<MainPanel/>
-    		<DetailedPanel/>
     	</div>
     )
   }

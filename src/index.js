@@ -11,10 +11,12 @@ import './index.css';
 class App extends Component {
   render() {
     return (
-      <div>
+      <div className="page">
       	<Header/>
-      	<Directory/>
-      	<InfoPanels/>
+      	<div className="wrapper">
+      		<Directory/>
+      		<InfoPanels/>
+      	</div>
       </div>
     );
   }
