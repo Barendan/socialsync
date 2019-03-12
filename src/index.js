@@ -1,10 +1,11 @@
 import React, {Component} from 'react';
 import ReactDOM from 'react-dom';
 
-import './index.css';
 import Header from './components/Header/header';
 import Directory from './components/Directory/directory';
-import DisplayPanel from './components/DisplayPanel/displayPanel';
+import InfoPanels from './components/InfoPanels';
+
+import './index.css';
 
 
 class App extends Component {
@@ -13,7 +14,7 @@ class App extends Component {
       <div>
       	<Header/>
       	<Directory/>
-      	<DisplayPanel/>
+      	<InfoPanels/>
       </div>
     );
   }
