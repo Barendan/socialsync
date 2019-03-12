@@ -8,10 +8,6 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
-}
 
 .page {
 	height: 100vh;
@@ -43,7 +39,6 @@ code {
 	height: 100%;
 	width:100%;
 	overflow-y:scroll;
-	/*padding: 5px;*/
 	padding-right: 17px;
 }
 
@@ -54,10 +49,6 @@ code {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
-	/*overflow-y:scroll;*/
-}
-
-ul {
 }
 
 .personName {
