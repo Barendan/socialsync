@@ -14,16 +14,29 @@ class Directory extends Component {
 
 	componentWillMount = () => {
 		let sorted = Catalog.friends.map(item => {
-			return(item.name)
+			return (item.name)
 		}).sort()
+		this.setState({ persons: sorted })
+	}
 
-		this.setState({
-			persons: sorted
-		})
+	addNewPerson = (item) => {
+		
+		
+		let persons = this.state.persons;
+		persons.push(item);
+		this.setState({persons});
+	}
+
+	deletePerson = () => {
+
+	}
+
+	editPerson = () => {
+
 	}
 
 	render() {
-		console.log(this.state.persons)
+		// console.log(this.state.persons)
 		return (
 			<div className="directory_wrapper">
 				<h2>Directory</h2>
@@ -32,6 +45,16 @@ class Directory extends Component {
 					<PersonTemplate data={this.state.persons}/>
 				</ul>
 				</div>
+
+				<button className="add"
+						onClick={this.addNewPerson}
+				/>
+				<button className="delete"
+						onClick={this.deletePerson}
+				/>
+				<button className="edit"
+						onClick={this.editPerson}
+				/>
 			</div>
 		);
 	}
