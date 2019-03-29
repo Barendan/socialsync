@@ -27,7 +27,6 @@ class InfoPanels extends Component {
 			<div className="panel-wrapper">
 				{!this.state.edit ? 
 					<RenderPerson data={this.state.formdata}/>
-					// console.log(this.state.formdata)
 				:
 					this.renderForm()
 				}

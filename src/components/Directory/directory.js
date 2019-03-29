@@ -1,8 +1,6 @@
 import React, {Component} from 'react';
 
-import Catalog from '../../friends.json';
 import PersonTemplate from './personTemplate';
-
 import './directory.css';
 
 
@@ -12,16 +10,17 @@ class Directory extends Component {
 		persons:[]
 	}
 
-	componentWillMount = () => {
-		let sorted = Catalog.friends.map(item => {
+	componentWillMount = (props) => {
+		console.log(props.data);
+		let sorted = props.friends.map(item => {
 			return (item.name)
 		}).sort()
 		this.setState({ persons: sorted })
 	}
 
 	addNewPerson = (item) => {
-		
-		
+
+
 		let persons = this.state.persons;
 		persons.push(item);
 		this.setState({persons});
