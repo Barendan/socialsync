@@ -9,7 +9,7 @@ body {
 }
 
 
-.page {
+/*.page {
 	height: 100vh;
 }
 
@@ -61,7 +61,7 @@ body {
 .personName:hover {
 	cursor: pointer;
 	background-color: #ddd;
-}
+}*/
 
 
 
@@ -74,4 +74,17 @@ body {
 
 /*GREENSOCK JS TIME*/
 
+.page {
+	height: 100vh;
+}
+
+.one {
+	background-color: white;
+}
+.two {
+	background-color: goldenrod;
+}
+.three {
+	background-color: teal;
+}
 

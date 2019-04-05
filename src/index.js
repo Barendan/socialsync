@@ -5,7 +5,7 @@ import Header from './components/Header/header';
 // import Directory from './components/Directory/directory';
 // import InfoPanels from './components/InfoPanels';
 
-
+import { TweenMax, TweenLite, TimelineLite } from "gsap/TweenMax";
 
 import Catalog from './friends.json';
 import './index.css';
@@ -34,14 +34,25 @@ class App extends Component {
 
 
   renderDisplay = () => (
-    <div className="page">
-      <Header/>
+    <div>
+      <div className="page one">
+        <Header/>
 
-      <div className="wrapper">
-
-        <div ref={div => this.myElement = div} />;
-      
+        <div className="wrapper">
+          <div ref={div => this.myElement = div}>
+            Hello Hello friend. Whats up
+          </div>
+        </div>
       </div>
+
+      <div className="page two">
+
+      </div>
+
+      <div className="page three">
+
+      </div>
+
     </div>
   )
 
