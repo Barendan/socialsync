@@ -67,6 +67,282 @@ body {
 
 
 
+/*Stock CSS*/
+
+body {
+    width: 100%;
+    height: 100%;
+    -moz-osx-font-smoothing: grayscale;
+    -webkit-font-smoothing: antialiased;
+    font-smoothing: antialiased;
+    text-rendering: optimizespeed;
+    color: #000;
+    font-size: 20px;
+    /*overflow: hidden;*/
+}
+body {
+    background-repeat: no-repeat;
+    background-position: top center;
+    /*overflow: hidden;*/
+}
+
+* {
+    outline: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: transparent;
+}
+* {
+    margin: 0;
+    padding: 0;
+    vertical-align: middle;
+}
+
+.app section {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    /*opacity: 0;*/
+    /*visibility: hidden;*/
+}
+
+.app section.home {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    -webkit-overflow-scrolling: touch;
+    overflow: hidden;
+}
+
+.app section.project {
+    position: absolute;
+    background-color: transparent;
+    color: #ffffff;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+    overflow: hidden;
+}
+
+
+
+
+
+
+.app section.project .background {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.app section.project .background .cover-image .container {
+    background-color: #000000;
+    overflow: hidden;
+}
+
+.app section.project .background .cover-image .container .background {
+    position: relative;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+}
+
+.app section.project .background .cover-image .container-2, .app section.project .background .cover-image .container-4, .app section.project .background .cover-image .container-6, .app section.project .background .cover-image .container-8 {
+    position: absolute;
+    top: 0%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+}
+
+.app section.project .background .cover-image .container-1, .app section.project .background .cover-image .container-3, .app section.project .background .cover-image .container-5, .app section.project .background .cover-image .container-7 {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 50%;
+    height: 100%;
+}
+
+.app section.project .background .cover-image .container-4, .app section.project .background .cover-image .container-6, .app section.project .background .cover-image .container-8 {
+    background-color: #000000;
+}
+
+.app section.project .background .cover-image .container-4, .app section.project .background .cover-image .container-6, .app section.project .background .cover-image .container-8 {
+    -webkit-transform: translate3d(-100%, 0%, 0);
+    transform: translate3d(-100%, 0%, 0);
+    opacity: 0;
+}
+
+.app section.project .background .cover-image .container-3, .app section.project .background .cover-image .container-5, .app section.project .background .cover-image .container-7 {
+    background-color: #000000;
+}
+
+.app section.project .background .cover-image .container-3, .app section.project .background .cover-image .container-5, .app section.project .background .cover-image .container-7 {
+    -webkit-transform: translate3d(0%, 100%, 0);
+    transform: translate3d(0%, 100%, 0);
+    opacity: 0;
+}
+
+
+
+.app section.project .background .cover-image .container .background-2 {
+    /*background-image: ;*/
+    background-color: red;
+    background-size: cover;
+    background-position: center center;
+}
+.app section.project .background .cover-image .container .background-4 {
+    /*background-image:;*/
+    background-color: blue;
+    background-size: cover;
+    background-position: center center;
+}
+.app section.project .background .cover-image .container .background-6 {
+    /*background-image: url(../assets/images/website/home/project/background_6.jpg);*/
+    background-color: purple;
+    background-size: cover;
+    background-position: center center;
+}
+
+
+.app section.project .background .cover-image .container .background-1 {
+    /*background-image: url(../assets/images/website/home/project/background_1.jpg);*/
+    background-size: cover;
+    background-position: center center;
+}
+.app section.project .background .cover-image .container .background-3 {
+    /*background-image: url(../assets/images/website/home/project/background_3.jpg);*/
+    background-size: cover;
+    background-position: center center;
+}
+.app section.project .background .cover-image .container .background-5 {
+    /*background-image: url(../assets/images/website/home/project/background_5.jpg);*/
+    background-size: cover;
+    background-position: center center;
+}
+
+
+
+/*cover-text*/
+.app section.project .background .cover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50%;
+    height: 50%;
+    background-color: #ffffff;
+}
+
+.app section.project .background .cover-text .container {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    height: auto;
+    -webkit-transform: translate3d(0px, -50%, 0px);
+    transform: translate3d(0px, -50%, 0px);
+    opacity: 0;
+}
+
+.app section.project .background .cover-text .container .title {
+    position: absolute;
+    display: block;
+    height: 22px;
+    margin: 0 auto;
+    margin-bottom: 42px;
+    left: 50%;
+    overflow: hidden;
+    -webkit-transform: translate3d(-50%, 0, 0);
+    transform: translate3d(-50%, 0, 0);
+    text-rendering: geometricPrecision;
+}
+
+.app section.project .background .cover-text .container .title {
+    margin-bottom: 20px;
+}
+
+.app section.project .background .cover-text .container .title .text-underline {
+    margin-right: 0px;
+}
+
+.app section.home .text-underline {
+    width: auto;
+    float: left;
+    margin-right: 15px;
+}
+
+.app section.home .text-underline .content {
+    width: auto;
+}
+
+.app section.project .background .cover-text .container .title .text-underline p {
+    font-size: 11px;
+    letter-spacing: 9px;
+}
+
+.app section.project .background .cover-text .container .title .text-underline p {
+    /*font-family: 'HPSimplified-Regular';*/
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 10px;
+    color: #1a8ed4;
+}
+
+.app section.project .background .cover-text .container .title .text-underline .underline {
+    margin-top: 0px;
+}
+
+.app section.home .text-underline .underline {
+    position: relative;
+    width: 100%;
+    height: 1px;
+    margin-top: 4px;
+    overflow: hidden;
+}
+
+.app section.home .text-underline .underline .background-underline {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: #1a8ed4;
+}
+
+.app section.project .background .cover-text .container .description {
+    width: 100%;
+    float: none;
+    margin-top: 40px;
+    height: auto;
+}
+
+.app section.project .background .cover-text .container .description {
+    width: 100%;
+    float: none;
+}
+
+.app section.project .background .cover-text .container .description p {
+    width: 55%;
+    min-width: 300px;
+    margin: 0 auto;
+    text-align: center;
+    /*font-family: 'HPSimplified-Light';*/
+    font-size: 16px;
+    color: #000000;
+    line-height: 26px;
+}
+
+.app section.project .background .cover-text .container .description p {
+    width: 55%;
+    font-size: 12px;
+    line-height: 20px;
+}
+
 
 
 
@@ -74,17 +350,4 @@ body {
 
 /*GREENSOCK JS TIME*/
 
-.page {
-	height: 100vh;
-}
-
-.one {
-	background-color: white;
-}
-.two {
-	background-color: goldenrod;
-}
-.three {
-	background-color: teal;
-}
 

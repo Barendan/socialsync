@@ -37,7 +37,7 @@ class App extends Component {
     <div className="app">
 
 
-      <section className="page one">
+      <section className="home">
         <Header/>
 
         <div ref={div => this.myElement = div}>
@@ -46,7 +46,7 @@ class App extends Component {
 
       </section>
 
-      <section className="page two">
+      <section className="project">
         
         <div className="background">
 
@@ -93,14 +93,14 @@ class App extends Component {
                     <p> Skills Make the Man</p>
                   </div>
                   <div className="underline">
-                    <div class="background-underline">
+                    <div className="background-underline">
                     </div>
                   </div>
 
                 </div>
               </div>
 
-              <div class="description">
+              <div className="description">
                 <p> Agora, você pode imprimir por comando de voz, via mobile e desktop. Você dita, a impressora HP imprime em tempo real. Unindo a HP Ink Advantage Ultra com uma API de reconhecimento de voz, criamos uma ferramenta capaz de imprimir historias contadas, instantaneamente. Durante o projeto, configuramos a ferramenta para que os relatos fossem impressos na diagramação exata das páginas do livro. Nossos autores mais urbanos contaram suas histórias de vida usando o APP Magic Words no celular, enquanto outros usaram um microfone comum e a ferramenta no desktop.
                 </p>  
               </div>
@@ -114,14 +114,14 @@ class App extends Component {
                     <p> Skills Make the Man</p>
                   </div>
                   <div className="underline">
-                    <div class="background-underline">
+                    <div className="background-underline">
                     </div>
                   </div>
 
                 </div>
               </div>
 
-              <div class="description">
+              <div className="description">
                 <p> Agora, você pode imprimir por comando de voz, via mobile e desktop. Você dita, a impressora HP imprime em tempo real. Unindo a HP Ink Advantage Ultra com uma API de reconhecimento de voz, criamos uma ferramenta capaz de imprimir historias contadas, instantaneamente. Durante o projeto, configuramos a ferramenta para que os relatos fossem impressos na diagramação exata das páginas do livro. Nossos autores mais urbanos contaram suas histórias de vida usando o APP Magic Words no celular, enquanto outros usaram um microfone comum e a ferramenta no desktop.
                 </p>  
               </div>
@@ -135,20 +135,140 @@ class App extends Component {
                     <p> Skills Make the Man</p>
                   </div>
                   <div className="underline">
-                    <div class="background-underline">
+                    <div className="background-underline">
                     </div>
                   </div>
 
                 </div>
               </div>
 
-              <div class="description">
+              <div className="description">
                 <p> Agora, você pode imprimir por comando de voz, via mobile e desktop. Você dita, a impressora HP imprime em tempo real. Unindo a HP Ink Advantage Ultra com uma API de reconhecimento de voz, criamos uma ferramenta capaz de imprimir historias contadas, instantaneamente. Durante o projeto, configuramos a ferramenta para que os relatos fossem impressos na diagramação exata das páginas do livro. Nossos autores mais urbanos contaram suas histórias de vida usando o APP Magic Words no celular, enquanto outros usaram um microfone comum e a ferramenta no desktop.
                 </p>  
               </div>
             </div>
           </div>
-          
+
+        </div>
+
+        <div className="text">
+
+          <div className="highlight">
+            <div className="text-underline">
+
+              <div className="content">
+                <p>Conheça o</p>
+              </div>
+
+              <div className="underline">
+                <div className="background-underline">
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div className="title">
+            <p>
+              <span>Proje</span>
+              <span>to</span>
+            </p>
+          </div>
+
+          <div className="line-horizontal">
+          </div>
+        </div>
+
+        <div className="list">
+          <ul>
+            <li data-page="technology">
+
+              <div className="bullet">
+              </div>
+
+              <div className="line">
+                <div className="line-background">
+                </div>
+              </div>
+
+              <div className="icon" >
+                <div className="image">
+                </div>
+              </div>
+
+              <div className="title">
+                <div className="text-underline">
+                  <div className="content">
+                    <p>Imprima por voz</p>
+                  </div>
+
+                  <div className="underline">
+                    <div className="background-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+            <li data-page="documentary">
+
+              <div className="bullet">
+              </div>
+
+              <div className="line">
+                <div className="line-background">
+                </div>
+              </div>
+
+              <div className="icon">
+                <div className="image">
+                </div>
+              </div>
+
+              <div className="title">
+                <div className="text-underline">
+                  <div className="content">
+                    <p>O documentário</p>
+                  </div>
+                  <div className="underline">
+                    <div className="background-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+
+            <li data-page="book">
+
+              <div className="bullet">
+              </div>
+
+              <div className="line">
+                <div className="line-background">
+                </div>
+              </div>
+
+              <div className="icon">
+                <div className="image">
+                </div>
+              </div>
+
+              <div className="title">
+                <div className="text-underline">
+                  <div className="content">
+                    <p>O livro</p>
+                  </div>
+                  <div className="underline">
+                    <div className="background-underline">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </li>
+          </ul>
         </div>
       
       </section>
