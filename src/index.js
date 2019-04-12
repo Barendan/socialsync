@@ -5,7 +5,10 @@ import Header from './components/Header/header';
 // import Directory from './components/Directory/directory';
 // import InfoPanels from './components/InfoPanels';
 
-import { TweenMax, TweenLite, TimelineLite } from "gsap/TweenMax";
+// import { TweenMax, TweenLite, TimelineLite } from "gsap/TweenMax";
+import $ from "jquery";
+// import CustomScroll from './components/utilities/customScroll';
+import Timeline from './components/utilities/Timeline';
 
 import Catalog from './friends.json';
 import './index.css';
@@ -14,12 +17,60 @@ import './index.css';
 class App extends Component {
   constructor(props){
     super(props);
-    this.myElement = null;
-    this.myTween = null;
+    this.state = {
+      name: "daniel",
+      timeline: null,
+      timelineDuration: 0,
+      timelineTime: 0,
+      controllers: {}
+    }
+
+    // this.t1 = new TimelineLite();
+    // this.element = null;
+
+    this.container_1 = $(".background .cover-image .container-1");
+    this.background_1 = $(".background .cover-image .container-1 .background-1");
+    this.container_2 = $(".background .cover-image .container-2");
+    this.background_2 = $(".background .cover-image .container-2 .background-2");
+    this.container_3 = $(".background .cover-image .container-3");
+    this.background_3 = $(".background .cover-image .container-3 .background-3");
+    this.container_4 = $(".background .cover-image .container-4");
+    this.background_4 = $(".background .cover-image .container-4 .background-4");
+    this.container_5 = $(".background .cover-image .container-5");
+    this.background_5 = $(".background .cover-image .container-5 .background-5");
+    this.container_6 = $(".background .cover-image .container-6");
+    this.background_6 = $(".background .cover-image .container-6 .background-6");
+    this.container_7 = $(".background .cover-image .container-7");
+    this.background_7 = $(".background .cover-image .container-7 .background-7");
+    this.container_8 = $(".background .cover-image .container-8");
+    this.background_8 = $(".background .cover-image .container-8 .background-8");
+    this.text_1 = $(".background .cover-text .container-1");
+    this.text_2 = $(".background .cover-text .container-2");
+    this.text_3 = $(".background .cover-text .container-3");
+    this.text_4 = $(".background .cover-text .container-4");
+    this.text = $(".text");
+    this.list = $(".list");
+  }
+
+  componentWillMount(){
+    {console.log("timeline",Timeline)};
+    {console.log("getInstance",Timeline.getInstance)}
+    // Timeline()
+    
+    // this.scroll = new CustomScroll(0,this.timeline.duration()),
+    // $(this.scroll).bind(
+    //   CustomScroll.EVENT.MOVE,
+    //   this.general_SCROLL.bind(this)
+    // ),
+    // general_SCROLL = (e) => {
+    //   // this.controllers.home.setScrollPosition(e.target.scroll),
+    //   this.timeline.get().time(e.target.scroll)
+    // }
   }
 
   componentDidMount(){
-    this.myTween = TweenLite.to(this.myElement, 1, {x:300, y:300});
+    // this.state.timeline = Timeline.getInstance(),
+    // {console.log("Hello")}
   }
 
   // componentWillMount = () => {
@@ -28,10 +79,6 @@ class App extends Component {
   //   }).sort()
   //   this.setState({ persons: sorted })
   // }
-
-
-
-
 
   renderDisplay = () => (
     <div className="app">
@@ -43,6 +90,11 @@ class App extends Component {
         <div ref={div => this.myElement = div}>
           Hello Hello friend. Whats up
         </div>
+
+
+        <p ref={p => this.element = p}>
+          Isn't this just wonderful
+        </p>
 
       </section>
 
@@ -283,6 +335,7 @@ class App extends Component {
 
     return (
       <div>
+        <Timeline/>
         {this.renderDisplay()}
       </div>
     )
