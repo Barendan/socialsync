@@ -1,14 +1,14 @@
-import React, {Component} from 'react';
+import React from 'react';
 import './app.css';
 
 import Header from './Header/header';
 import UserList from '../containers/user-list';
 import UserDetail from '../containers/user-detail';
 
+import User from './Forms/user';
 
-class App extends Component {
+const App = (props) => {
 
-  render(){
     return (
       <div className="page">
         <Header />
@@ -19,8 +19,7 @@ class App extends Component {
         </div>
       </div>
     )
-  }
-
+    
 }
 
 export default App;
