@@ -5,6 +5,8 @@ import {createStore} from 'redux';
 import allReducers from './reducers';
 import App from './components/app';
 
+import './firebase';
+
 const store = createStore(allReducers);
 
 ReactDOM.render(
