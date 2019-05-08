@@ -16,10 +16,4 @@ firebase.initializeApp(config);
 
 const firebaseDB = firebase.database();
 
-firebaseDB.ref('eyes').set('brown')
-.then(()=>{
-	console.log('data saved')
-})
-.catch((e)=>{
-	console.log(e)
-})
+export { firebaseDB }

@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import FormFields from './formFields';
 import './formFields.css';
 
+import { firebaseDB } from '../../firebase';
+
 class User extends Component {
 	state = {
 		formData:{
