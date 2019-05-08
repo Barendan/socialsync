@@ -98,7 +98,13 @@ class User extends Component {
 		}
 
 		if(formIsValid){
-			console.log(dataToSubmit)
+			firebaseDB.ref('users').push(dataToSubmit)
+			.then((snapshot)=> {
+				console.log('new user added')
+			})
+			.catch( e => {
+				console.log(e)
+			})
 		}
 
 	}
@@ -107,7 +113,7 @@ class User extends Component {
 		return(
 			<div className="container">
 				<form onSubmit={this.submitForm}>
-				
+
 					<FormFields
 						formData={this.state.formData}
 						onblur={ (newState) => this.updateForm(newState)}
