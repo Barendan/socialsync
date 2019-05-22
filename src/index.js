@@ -1,22 +1,15 @@
 import React from 'react';
-import ReactDOM from "react-dom";
+import ReactDOM from 'react-dom';
 
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
-import allReducers from './reducers';
-
-import { firebase } from './firebase';
-import App from './components/app';
+import Firebase, { FirebaseContext } from './components/Firebase';
+import App from './app';
+import './index.css';
 
 
-const store = createStore(allReducers);
 
-
-firebase.auth().onAuthStateChanged((user)=>{
-	ReactDOM.render(
-	    <Provider store={store}>
-	        <App auth={user}/>
-	    </Provider>,
-	    document.getElementById('root')
-	);
-})
+ReactDOM.render(
+	<FirebaseContext.Provider value={ new Firebase() }>
+		<App />
+	</FirebaseContext.Provider>
+	, document.getElementById('root')
+)
