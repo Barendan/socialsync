@@ -9,7 +9,7 @@ import MyAccountPage from './components/Account/myAccount';
 
 // import PasswordForgetPage from '../PasswordForget';
 
-import { withAuthentication } from '../Session';
+import { withAuthentication } from './components/Session';
 
 
 const App = () => (
