@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { Link, withRouter } from 'react-router-dom';
 import { compose } from 'recompose';
-
 import { withFirebase } from '../Firebase';
 
 
@@ -54,10 +53,6 @@ class SignUpFormBase extends Component {
 
     onChange = event => {
         this.setState({ [event.target.name]: event.target.value })
-    }
-
-    onChangeCheckbox = event => {
-      this.setState({ [event.target.name]: event.target.checked })
     }
 
     render() {
