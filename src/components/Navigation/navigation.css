@@ -1,12 +1,17 @@
-.top_header {
+.top_bar {
 	display: flex;
 	justify-content: space-between;
 	padding: 7px;
 	border:1px solid black;
 }
 
-.greeting {
+.top_bar li {
+	list-style: none;
+	flex-grow: 1;
+}
 
+.greeting {
+	flex-grow: 5 !important;
 }
 
 .menu {

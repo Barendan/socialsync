@@ -1,49 +1,58 @@
-import React, {Component} from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+import SignOutButton from '../Account/signout';
+import { AuthUserContext } from '../Session';
 import './navigation.css';
 
 
 
-class Navigation extends Component {
-  state = {
-    status: false
-  }
-
-  // signIn = () => {
-  //   firebase.auth().signInWithPopup(googleAuth)
-  // }
-
-  // signOut = () => {
-  //   firebase.auth().signOut()
-  // }
-
-  // componentDidMount(){
-  //   firebase.auth().onAuthStateChanged((user)=> {
-  //     this.setState({
-  //       status: user ? false : true
-  //     })
-  //   })
-  // }
-
-
-  render() {
-    return (
-      <div className="top_header">
-      	<div className="greeting">
-      		Welcome back Daniel Barenboim
-      	</div>
-      	<div className="menu">
-          { this.state.status ?
-            <button onClick={ this.signIn }> Login </button>
-            :
-            <button onClick={ this.signOut }> Logout </button>
+const Navigation = () => (
+    <div>
+        <AuthUserContext.Consumer>
+          { authUser => 
+              authUser ? (
+                <NavigationAuth authUser={authUser} /> 
+              ) : (
+                <NavigationNonAuth />
+              )
           }
-      		<img alt="self" src=""/>
-      		Menu
-      	</div>
-      </div>
-    );
-  }
-}
+        </AuthUserContext.Consumer>
+    </div>
+)
+
+
+const NavigationAuth = ({ authUser }) => (
+    <ul className="top_bar">
+        <li className="greeting">
+            Hello there { authUser.username }
+        </li>
+        <li>
+          <Link to='/'>Home</Link>
+        </li>
+        <li>
+          <Link to='/account'>Account</Link>
+        </li>
+        <li>
+          <SignOutButton />
+        </li>
+    </ul>
+)
+
+
+const NavigationNonAuth = () => (
+    <ul className="top_bar">
+        <li>
+            <Link to='/'>Home</Link>
+        </li>
+        <li>
+            <Link to='/signin'>Sign In</Link>
+        </li>
+        <li>
+            <Link to='/signup'>Sign Up</Link>
+        </li>
+    </ul>
+)
 
 
 export default Navigation;
