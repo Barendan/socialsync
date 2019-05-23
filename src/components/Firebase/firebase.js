@@ -20,7 +20,7 @@ class Firebase {
     this.db = app.database();
 
     this.googleProvider = new app.auth.GoogleAuthProvider();
-    // this.facebookProvider = new app.auth.FacebookAuthProvider();
+    this.facebookProvider = new app.auth.FacebookAuthProvider();
     // this.serverValue = app.database.ServerValue;
 	}
 
@@ -34,12 +34,12 @@ class Firebase {
     doSignInWithGoogle = () => 
       this.auth.signInWithPopup(this.googleProvider)
 
-    // doSignInWithFacebook = () =>
-    //   this.auth.signInWithPopup(this.facebookProvider)
+    doSignInWithFacebook = () =>
+      this.auth.signInWithPopup(this.facebookProvider)
 
   	doSignOut = () => this.auth.signOut()
 	
-  	// doPasswordReset = email => this.auth.sendPasswordResetEmail(email)
+  	doPasswordReset = email => this.auth.sendPasswordResetEmail(email)
 	
   	doPasswordUpdate = password =>
     	this.auth.currentUser.updatePassword(password)
@@ -53,12 +53,6 @@ class Firebase {
           .once('value')
           .then(snapshot => {
             const dbUser = snapshot.val();
-            // console.log(authUser)
-
-            //default empty roles
-            if (!dbUser.roles) {
-              dbUser.roles = {}
-            }
 
             //merge auth and db user
             authUser = {

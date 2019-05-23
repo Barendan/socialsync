@@ -4,14 +4,19 @@ import { compose } from 'recompose';
 
 import { SignUpLink } from './signup';
 import { withFirebase } from '../Firebase';
+import { PasswordForgetLink } from './passwordForget';
 
 
 
 const SignInPage = () => (
 	<div>
-		<h1>SignIn</h1>
+		<h1>Sign In</h1>
 		<SignInForm />
+		<br />
 		<SignInGoogle />
+		<SignInFacebook />
+		<hr />
+		<PasswordForgetLink />
 		<SignUpLink />
 	</div>
 );
@@ -63,6 +68,48 @@ class SignInGoogleBase extends Component {
 	}
 }
 
+class SignInFacebookBase extends Component {
+	constructor(props){
+		super(props);
+
+		this.state = { error: null }
+	}
+
+	onSubmit = event => {
+		this.props.firebase
+			.doSignInWithFacebook()
+			.then(socialAuthUser => {
+				return this.props.firebase
+					.user(socialAuthUser.user.uid)
+					.set({
+						username: socialAuthUser.additionalUserInfo.profile.name,
+						email: socialAuthUser.additionalUserInfo.profile.email
+					})
+			})
+			.then( () => {
+				this.setState({ error: null })
+				this.props.history.push('/');
+			})
+			.catch( error => {
+				this.setState({ error })
+			})
+
+		event.preventDefault();
+	}
+
+	render() {
+		const { error } = this.state;
+
+		return (
+			<form onSubmit={this.onSubmit}>
+				<button type="submit">Sign In with Facebook</button>
+
+				{ error && <p>{error.message}</p> }
+			</form>
+		)
+	}
+}
+
 
 class SignInFormBase extends Component {
 	constructor(props){
@@ -104,14 +151,14 @@ class SignInFormBase extends Component {
 	          onChange={this.onChange}
 	          type="text"
 	          placeholder="Email Address"
-	        />
+	        /><br />
 	        <input
 	          name="password"
 	          value={password}
 	          onChange={this.onChange}
 	          type="password"
 	          placeholder="Password"
-	        />
+	        /><br />
 	        <button disabled={isInvalid} type="submit">
 	          Sign In
 	        </button>
@@ -131,6 +178,11 @@ const SignInGoogle = compose(
 	withRouter,
 	withFirebase,
 )(SignInGoogleBase);
+
+const SignInFacebook = compose(
+	withRouter,
+	withFirebase,
+)(SignInFacebookBase)
 
 export default SignInPage;
 

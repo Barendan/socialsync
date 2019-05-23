@@ -2,7 +2,7 @@
 	display: flex;
 	justify-content: space-between;
 	padding: 7px;
-	border:1px solid black;
+	/*border:1px solid black;*/
 }
 
 .top_bar li {
