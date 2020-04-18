@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import { firebase, googleAuth } from '../../firebase';
+import firebase from '../../firebase';
 import './header.css';
 
 
@@ -10,19 +10,19 @@ class header extends Component {
   }
 
   signIn = () => {
-    firebase.auth().signInWithPopup(googleAuth)
+    // firebase.auth().signInWithPopup(googleAuth)
   }
 
   signOut = () => {
-    firebase.auth().signOut()
+    // firebase.auth().signOut()
   }
 
   componentDidMount(){
-    firebase.auth().onAuthStateChanged((user)=> {
-      this.setState({
-        status: user ? false : true
-      })
-    })
+    // firebase.auth().onAuthStateChanged((user)=> {
+      // this.setState({
+        // status: user ? false : true
+      // })
+    // })
   }
 
 
